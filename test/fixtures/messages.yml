@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  subject: MySubject
+  body: MyString with at least 40 characters in body lorem ipsum 40ixtum
+
+two:
+  subject: MyOtherSubject
+  body: MyOtherString with at least 40 characters in body lorem ipsum 40ixtum

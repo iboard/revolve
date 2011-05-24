@@ -1,0 +1,13 @@
+#page_action_links
+  = link_to 'New Message', new_message_path
+
+#messages
+  - @messages.each do |message|
+    %h1= message.subject
+    %address
+      = link_to 'Show', message
+      = link_to 'Edit', edit_message_path(message)
+      = link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete
+    .message_body= render_body message.body
+
+%br
