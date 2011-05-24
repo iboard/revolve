@@ -1,18 +1,22 @@
-== The Revolve Project
+The Revolve Project
+===================
 
 This project was initilized to test Rails 3.1 (rc1 at the moment)
 
-== Getting Started
+Getting Started
+===============
 
   1. Clone from github
   2. bundle
   3. rails server
   
-== Testing
+Testing
+=======
 
 See `thor list`
 
-== License
+License
+=======
 
 Copyright (c) 2011 by Andreas Altendorfer <andreas@altendorfer.at>
  
