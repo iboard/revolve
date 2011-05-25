@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   # GET /messages
   # GET /messages.json
   def index
@@ -35,6 +36,10 @@ class MessagesController < ApplicationController
   # GET /messages/1/edit
   def edit
     @message = Message.find(params[:id])
+    respond_to do |format|
+      format.js {render :content_type => 'text/javascript', :layout => false}
+      format.html # edit.html.erb
+    end
   end
 
   # POST /messages
@@ -60,9 +65,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.update_attributes(params[:message])
+        format.js {render :content_type => 'text/javascript', :layout => false}
         format.html { redirect_to @message, notice: 'Message was successfully updated.' }
         format.json { head :ok }
       else
+        format.js {render :js => "alert('#{@message.errors.full_messages}')"}
         format.html { render action: "edit" }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end

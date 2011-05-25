@@ -3,10 +3,15 @@ $light_background:   #898989;
 $bright_background:  #D5D5D5;
 $colored_background: #779295;
 $text_color:         #010101;
+$light_green:        #B9D87B;
+$dark_green:         #1B5412;
+$light_red:          #FC9E92;
+$dark_red:           #95150B;
 $default_padding:       20px;
 $default_margin:        20px;
 $block_steps:           80px;  /* gap between two articles */
 $block_address_top:      5px;  /* eg. between a title and the edit-buttons below */
+$main_width:             75%;
 
 body {
   background:  $dark_background;
@@ -53,7 +58,7 @@ body {
 }
 
 #main {
-  width: 75%;
+  width: $main_width;
   margin-left: auto;
   margin-right: auto;
 }
@@ -109,7 +114,23 @@ div.field, div.actions {
 }
 
 #notice {
-  color: green;
+  width: $main_width;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background: $light_green;
+  border: 1 px solid $dark_green;
+  border-radius: 5px 5px 5px 5px;
+  color: $dark_green;
+}
+
+#alert {
+  width: $main_width;
+  padding: 5px;
+  background: $light_red;
+  border: 1 px solid $dark_red;
+  border-radius: 5px 5px 5px 5px;
+  color: $dark_red;
 }
 
 .field_with_errors {

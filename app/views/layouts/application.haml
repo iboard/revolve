@@ -8,6 +8,12 @@
         #header
             %h1 RAILS 3.1 Test Application
         #container
+            - unless notice.blank?
+                #notice
+                    = notice
+            - unless alert.blank?
+                #alert
+                    = alert
             #main
                 = yield
             %p{ style: 'clear: both;' }
