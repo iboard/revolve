@@ -1,3 +1,3 @@
 update_message( <%=  @message.to_json.html_safe -%>, 
-                <%=  @message.errors.any? ? @message.errors.full_messages.to_json.html_safe : 'null' -%>, 
+                <%=  @message.errors.any? ? @message.errors.to_json.html_safe : 'null' -%>, 
                "<%= escape_javascript( render @message ) -%>");

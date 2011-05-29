@@ -3,3 +3,12 @@
   They will automatically be included in application.css.
   You can use Sass (SCSS) here: http://sass-lang.com/
 */
+
+.errors {
+  border: 1px solid #500;
+  padding: 10px;
+  color: #500;
+  background: #CB687D;
+  width: 550px;
+  margin: 5px;
+}

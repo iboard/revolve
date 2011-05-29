@@ -7,7 +7,12 @@
 
 @update_message = (message, errors, html) ->
   unless errors == null
-    $("#"+ message.id + ".message_body").before( errors )
+    $("#errors_" + message.id ).remove()
+    msg = "<div class='errors' id='errors_#{message.id}'>"
+    error_messages = for field, error of errors
+      msg += field + ": " + error + "<br/>"
+    msg += "</div>"
+    $("#edit_message_"+ message.id + " .actions").before( msg )
   else
     $("#"+ message.id + ".message_body").html(html)
 
