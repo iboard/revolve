@@ -15,7 +15,7 @@
     .field
         = f.label :body
         %br
-        = f.text_area :body, :rows => 8, :cols => 80
+        = f.text_area :body, :rows => 8+@message.body.lines.count, :cols => 80
   
     .actions
         = f.submit

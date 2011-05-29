@@ -37,7 +37,7 @@ class MessagesController < ApplicationController
   def edit
     @message = Message.find(params[:id])
     respond_to do |format|
-      format.js {render :content_type => 'text/javascript', :layout => false}
+      format.js {render :layout => false}
       format.html # edit.html.erb
     end
   end
@@ -65,11 +65,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.update_attributes(params[:message])
-        format.js {render :content_type => 'text/javascript', :layout => false}
+        format.js {render :layout => false}
         format.html { redirect_to @message, notice: 'Message was successfully updated.' }
         format.json { head :ok }
       else
-        format.js {render :js => "alert('#{@message.errors.full_messages}')"}
+        format.js { render  :layout => false}
         format.html { render action: "edit" }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
