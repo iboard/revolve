@@ -37,7 +37,7 @@ class MessagesController < ApplicationController
   def edit
     @message = Message.find(params[:id])
     respond_to do |format|
-      format.js #{render :layout => false}
+      format.js {render :layout => false}
       format.html # edit.html.erb
     end
   end
