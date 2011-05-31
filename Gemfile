@@ -1,28 +1,28 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc1'
+#gem 'rails', '3.1.0.rc1'
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'rails', '3.1.0.rc1'
 
 gem 'sqlite3'
 
 # Asset template engines
 gem 'sass'
 gem 'coffee-script'
+gem 'haml'
 
 gem 'uglifier'
 
 gem 'jquery-rails'
-gem 'haml'
 gem "rdiscount"     # Markdown
 
 # Use unicorn as the web server
 gem 'unicorn'
 
 # Authentication stuff
-gem "cancan"
-gem "omniauth"
+# gem "cancan"
+# gem "omniauth"
 
 # Deploy with Capistrano
 # gem 'capistrano'
