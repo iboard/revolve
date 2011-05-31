@@ -1,4 +1,5 @@
-= form_for(@message, :remote => true) do |f| 
+= form_for(@message, :remote => @message.new_record? ? false : true) do |f| 
+
     - if @message.errors.any?
         #error_explanation
             %h2= pluralize(@message.errors.count, "error")
@@ -15,7 +16,7 @@
     .field
         = f.label :body
         %br
-        = f.text_area :body, :rows => 8+@message.body.lines.count, :cols => 80
+        = f.text_area :body, :rows => @message.new_record? ? 8 : 8+@message.body.lines.count, :cols => 80
   
     .actions
         = f.submit

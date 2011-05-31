@@ -1,4 +1,4 @@
-/* 
+/*
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
   You can use Sass (SCSS) here: http://sass-lang.com/
@@ -11,4 +11,18 @@
   background: #CB687D;
   width: 550px;
   margin: 5px;
+}
+
+#messages {
+  h1 {
+    margin-top: $block_steps;
+    margin-bottom: 0px;
+    font-size: 2.5em;
+    line-height: 110%;
+  }
+  address {
+    margin-top: $block_address_top;
+    margin-bottom: 10px;
+  }
+
 }

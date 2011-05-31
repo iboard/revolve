@@ -2,6 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+@new_message = (form) ->
+  $("#page_action_links").after( "<div id='new_message'><h1>New Message</h1>"+form+"</div>")
+
 @edit_message = (id, form) ->
   $("##{id}}.message_body").html(form)
 

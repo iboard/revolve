@@ -13,3 +13,15 @@ Feature: Messages
     Given I am on the home page
     Then I should see "Message in a bottle"
     And I should see "The body must be 40 characters long at least"
+
+  Scenario: I should be able to load the edit message form
+    Given I am on the home page
+    And I follow "Edit"
+    Then I should see "Editing message"
+
+  Scenario: I should be able modify a message
+    Given I am on the home page
+    And I follow "Edit"
+    And I fill in "Body" with "This is the new message and 40 chars long too."
+    And I press "Update Message"
+    Then I should see "This is the new message and 40 chars long too."

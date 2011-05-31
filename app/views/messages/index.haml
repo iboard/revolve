@@ -1,5 +1,5 @@
 #page_action_links
-  = link_to 'New Message', new_message_path
+  = link_to 'New Message', new_message_path, :remote => true
 
 #messages
   - @messages.each do |message|

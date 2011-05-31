@@ -26,7 +26,7 @@ class Test < Thor
       echo -n 'Spork server started - waiting to allow start up '
       for i in 9 8 7 6 5 4 3 2 1
       do
-        echo -n $i; sleep 1; echo -n ' '
+        echo -n $i; sleep 1; echo -n '\b'
       done
       echo 'Start continuos testing'
       bundle exec autotest
