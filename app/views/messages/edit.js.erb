@@ -1,3 +1,5 @@
-edit_message("<%= @message.id.to_s -%>", "<%= 
-  escape_javascript( render 'form' )
--%>");
+/* Calling a coffeescript */
+edit_message("<%= @message.id.to_s -%>", "<%=  escape_javascript( render 'form' )-%>");
+
+/* do it with js */
+/* $("#<%= @message.id.to_s -%>.message_body").html("<%= escape_javascript( render 'form' ) -%>"); */

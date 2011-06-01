@@ -1,9 +1,6 @@
 source 'http://rubygems.org'
 
-#gem 'rails', '3.1.0.rc1'
-
-# Bundle edge Rails instead:
-gem 'rails', '3.1.0.rc1'
+gem 'rails', '3.1.0.rc1' #, :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 
@@ -11,7 +8,6 @@ gem 'sqlite3'
 gem 'sass'
 gem 'coffee-script'
 gem 'haml'
-
 gem 'uglifier'
 
 gem 'jquery-rails'

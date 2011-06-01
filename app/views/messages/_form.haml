@@ -1,4 +1,4 @@
-= form_for(@message, :remote => @message.new_record? ? false : true) do |f| 
+= form_for(@message, :remote => !@message.new_record?) do |f| 
 
     - if @message.errors.any?
         #error_explanation
